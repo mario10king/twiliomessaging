@@ -1,0 +1,15 @@
+{
+  "name": "hack-night",
+  "version": "1.0.0",
+  "description": "",
+  "main": "message.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "twilio": "^3.22.0"
+  }
+}
