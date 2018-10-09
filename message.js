@@ -1,12 +1,12 @@
-var twilio = require("twilio");
+const twilio = require("twilio");
 require("dotenv").config();
 
-var accountSid = process.env.ACCOUNT_SID; 
-var authToken = process.env.AUTH_TOKEN;  
-var twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER;  
-var myPhoneNumber = process.env.MY_PHONE_NUMBER;  
+const accountSid = process.env.ACCOUNT_SID;
+const authToken = process.env.AUTH_TOKEN;
+const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER;
+const myPhoneNumber = process.env.MY_PHONE_NUMBER;
 
-var client = new twilio(accountSid, authToken);
+const client = new twilio(accountSid, authToken);
 
 function message(message, number){
   client.messages.create({
