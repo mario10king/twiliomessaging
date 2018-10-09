@@ -8,7 +8,7 @@ const myPhoneNumber = process.env.MY_PHONE_NUMBER;
 
 const client = new twilio(accountSid, authToken);
 
-function message(message, number){
+function sendMessage(message, number){
   client.messages.create({
     body: message,
     to: '+1' + number,  
@@ -17,4 +17,4 @@ function message(message, number){
     .then((message) => console.log(message.sid));
 }
 
-message('YOUR PACKAGE HAS BEEN DELIVERED', myPhoneNumber)
+sendMessage('YOUR PACKAGE HAS BEEN DELIVERED', myPhoneNumber)
