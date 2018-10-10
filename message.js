@@ -14,7 +14,8 @@ function sendMessage(message, number){
     to: '+1' + number,  
     from: '+1'+ twilioPhoneNumber 
   })
-    .then((message) => console.log(message.sid));
+    .then((message) => console.log("Your message was successfully sent"))
+    .catch((error) => console.log(error.message));
 }
 
 sendMessage('YOUR PACKAGE HAS BEEN DELIVERED', myPhoneNumber)
